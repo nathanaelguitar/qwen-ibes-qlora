@@ -11,7 +11,7 @@ We are running the project on a dedicated NVIDIA DGX Spark, which keeps the work
 - Fine-tune a base model with LoRA for finance-oriented tasks.
 - Measure improvement against the untuned baseline.
 - Keep the workflow simple enough for a class project and clear enough for presentation.
-- Split work cleanly across a four-person team using GitHub, SSH, and VS Code Remote SSH.
+- Split work cleanly across a four-person team using GitHub and VS Code.
 
 ## Team
 
@@ -21,35 +21,21 @@ We are running the project on a dedicated NVIDIA DGX Spark, which keeps the work
 - Om Patel
 - Nathanael Gill
 
-Suggested Linux usernames for DGX access:
-
-- use each teammate's Cornell NetID as their Linux username
-
 ## Planned workflow
 
-1. Set up teammate SSH access to the DGX.
-2. Use VS Code Remote SSH for shared development on the box.
-3. Prepare training, evaluation, and reporting code in this repo.
-4. Fine-tune the selected base model with LoRA.
-5. Evaluate base vs. tuned behavior on finance-focused tasks.
-6. Turn results into a short technical and business presentation.
+1. Prepare training, evaluation, and reporting code in this repo.
+2. Fine-tune the selected base model with LoRA.
+3. Evaluate base vs. tuned behavior on finance-focused tasks.
+4. Turn results into a short technical and business presentation.
 
 ## Repository status
 
 The repository currently contains:
 
-- SSH onboarding and machine-access tooling
 - a repo-local QLoRA training scaffold for `Qwen/Qwen3.6-27B`
 - a pinned `FinGPT` submodule under `external/FinGPT/`
 - small public sample data and export scripts for FinGPT / SEC demos
 - a PySpark WRDS / IBES bronze-silver-gold pipeline for building event-level datasets
-
-- Teammate getting-started guide: `docs/getting-started.md`
-- Team SSH key intake file: `docs/team-ssh-keys.md`
-- Admin guide: `docs/ssh-onboarding.md`
-- Teammate intake template: `docs/teammate-key-request.md`
-- Shared repo permissions: `scripts/configure_shared_repo.sh`
-- Per-user provisioning: `scripts/provision_teammate.sh`
 
 Training and data integration notes now live in:
 
@@ -64,7 +50,6 @@ Training and data integration notes now live in:
 - `docs/eval-findings.md`
 - `docs/model-selection.md`
 - `docs/market-reaction-plan.md`
-- `docs/classmate-data-requests.md`
 
 The current project step is not new training. The current project step is reconciling the completed `1k` and `10k` adapter results with a downstream market-reaction milestone.
 
@@ -151,20 +136,6 @@ The core pipeline doc is:
 
 - `docs/wrds-data-setup.md`
 
-## SSH onboarding
-
-This repo is set up for separate Linux accounts per teammate rather than a shared login. That keeps access cleaner and works well with VS Code Remote SSH.
-
-Machine-specific relay values are intentionally not tracked in this repo. Keep current host, port, and hardening notes in ignored local files under `admin/local/`.
-
-Provisioning details live in:
-
-- `docs/getting-started.md`
-- `docs/team-ssh-keys.md`
-- `docs/ssh-onboarding.md`
-- `docs/teammate-key-request.md`
-- `admin/LOCAL_OVERRIDES.md`
-
 ## Expected project structure
 
 As the project is built out, this repo will likely hold:
@@ -182,7 +153,7 @@ The DGX Spark will act as the shared execution environment for:
 - model access
 - LoRA fine-tuning
 - evaluation runs
-- collaborative development through SSH and VS Code Remote SSH
+- collaborative development through GitHub and VS Code
 
 To avoid collisions, the team should coordinate training windows and keep experiment outputs organized by run name and owner.
 

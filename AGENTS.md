@@ -10,14 +10,12 @@ WRDS data is shared through Google Drive and local ignored folders, not through 
 
 ## Local machine context
 
-This repo lives on a DGX Spark workstation with existing team SSH onboarding and relay infrastructure already in use.
+This repo lives on a DGX Spark workstation.
 The repo already has working QLoRA scaffolding and a repaired CUDA-capable `.venv`.
 Use the repo-local workflow below first; do not re-derive infrastructure that is already present on this machine.
 
 Relevant recent local facts:
-- Existing SSH onboarding for `ML_Class_LORA` was already implemented and pushed.
 - Existing Qwen 3.6 27B QLoRA training infrastructure was already found and migrated into this repo.
-- Reverse-SSH relay access for teammates already exists; do not rewrite that workflow unless explicitly asked.
 - The main repo `.venv` was previously repaired after an Unsloth install pulled a CPU-only torch build on ARM64.
 
 ## Directory map

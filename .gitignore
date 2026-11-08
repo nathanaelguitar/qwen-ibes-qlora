@@ -41,3 +41,14 @@ scripts/wrds_playwright_session.mjs
 *.zip
 backups/
 unsloth_compiled_cache/
+
+# Machine access, keys, and personal contact details never go in this repo
+admin/
+SSH_key_pair*
+*.pub
+*.pem
+CLAUDE.md
+docs/*ssh*
+docs/team-*
+docs/teammate-*
+docs/classmate-*
