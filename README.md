@@ -1,5 +1,9 @@
 # ML Class LoRA
 
+> **About this repository.** The project started in May 2026 and was developed in a private repository. This public repository was recreated in November 2026 from that history to remove personal contact details and machine-access notes. Commit dates are the originals, so the history is older than this repository. A few commits that only touched those files were dropped.
+>
+> WRDS/IBES is licensed data. This repository holds code, docs, and aggregate metrics only: no raw records, predictions, adapters, or checkpoints. The sample CSVs are made-up rows.
+
 This project focuses on fine-tuning a strong base model so it performs better on financial tasks that are easy to evaluate and explain.
 
 The core idea is to improve how the model works with structured financial inputs, recognizes patterns, and produces more reliable outputs for realistic finance scenarios. We will compare the fine-tuned model against the base model using clear metrics and concrete examples, then translate the results into a business-facing story such as faster analysis, more consistent outputs, or stronger decision support.
